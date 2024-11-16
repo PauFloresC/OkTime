@@ -1,0 +1,6 @@
+# Activar el RewriteEngine
+RewriteEngine On
+
+# Redirigir a main.php si se accede al directorio raíz
+RewriteCond %{REQUEST_URI} ^/oktime_app/?$ [NC]
+RewriteRule ^$ /oktime_app/main.php [L,R=302]
