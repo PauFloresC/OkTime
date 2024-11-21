@@ -9,7 +9,7 @@ $name = isset($_GET['name']) ? htmlspecialchars($_GET['name']) : "Usuario";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro Exitoso - Ok Time</title>
-    <link rel="icon" href="dist/img/ok_time_logo.png" type="image/png">
+    <link rel="icon" href="dist/img/favicon.ico" type="image/ico">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
@@ -51,7 +51,7 @@ $name = isset($_GET['name']) ? htmlspecialchars($_GET['name']) : "Usuario";
             Te has registrado con éxito. Te invitamos a descargar la aplicación móvil <strong>Ok Time</strong> para que puedas acceder a todas las funcionalidades que tenemos pensadas para ti.
         </p>
         <p>
-            <a href="dist/img/avatar.png" class="btn btn-primary mt-3">
+            <a href="dist/img/store.jpeg" class="btn btn-primary mt-3">
                 Descargar Ok Time
             </a>
         </p>
