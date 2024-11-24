@@ -153,7 +153,7 @@ if (isset($_POST['crearUsuario'])) {
         <div class="row">
         <!-- Columna para la imagen -->
         <div class="col-md-4">
-            <img src="dist/img/Diseno.png" alt="Imagen de diseño" class="img-fluid h-100 w-100 rounded-left">
+            <img src="dist/img/okTimeForm.webp" alt="Imagen de diseño" class="img-fluid h-100 w-100 rounded-left">
 
         </div>
 
