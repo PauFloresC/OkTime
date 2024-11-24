@@ -150,8 +150,17 @@ if (isset($_POST['crearUsuario'])) {
             </div>
         <?php endif; ?>
 
-        <div class="card">
-            <div class="card-header">
+        <div class="row">
+        <!-- Columna para la imagen -->
+        <div class="col-md-4">
+            <img src="dist/img/Diseno.png" alt="Imagen de diseño" class="img-fluid h-100 w-100 rounded-left">
+
+        </div>
+
+        <!-- Columna para el formulario -->
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
                 <h3>Crear un nuevo usuario</h3>
             </div>
             <div class="card-body">
