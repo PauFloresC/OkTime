@@ -178,22 +178,24 @@ if (isset($_POST['crearUsuario'])) {
                         <input type="text" name="lastName" class="form-control" required>
                     </div>
                     <div class="mb-3">
-                        <label for="country" class="form-label">País:</label>
-                        <select name="country" id="country" class="form-control" required>
-                        <option value="+56" data-length="9">Chile (+56)</option>
-                        <option value="+52" data-length="10">México (+52)</option>
-                        <option value="+1" data-length="10">Estados Unidos (+1)</option>
-                        <option value="+57" data-length="10">Colombia (+57)</option>
-                        <option value="+54" data-length="10">Argentina (+54)</option>
-                        <option value="+55" data-length="11">Brasil (+55)</option>
-                        <option value="+51" data-length="9">Perú (+51)</option>
-                        <option value="+593" data-length="9">Ecuador (+593)</option>
-                        <option value="+58" data-length="10">Venezuela (+58)</option>
-                        <option value="+34" data-length="9">España (+34)</option>
-                        <option value="+44" data-length="10">Reino Unido (+44)</option>
-                        </select>
-                            <input type="text" name="phone" id="phone" class="form-control" maxlength="10" required>
+                        <label for="country" class="form-label">País y Teléfono:</label>
+                        <div class="input-group">
+                            <select name="country" id="country" class="form-control" style="max-width: 150px;" required>
+                                <option value="+56" data-length="9">Chile (+56)</option>
+                                <option value="+52" data-length="10">México (+52)</option>
+                                <option value="+1" data-length="10">Estados Unidos (+1)</option>
+                                <option value="+57" data-length="10">Colombia (+57)</option>
+                                <option value="+54" data-length="10">Argentina (+54)</option>
+                                <option value="+55" data-length="11">Brasil (+55)</option>
+                                <option value="+51" data-length="9">Perú (+51)</option>
+                                <option value="+593" data-length="9">Ecuador (+593)</option>
+                                <option value="+58" data-length="10">Venezuela (+58)</option>
+                                <option value="+34" data-length="9">España (+34)</option>
+                                <option value="+44" data-length="10">Reino Unido (+44)</option>
+                            </select>
+                            <input type="text" name="phone" id="phone" class="form-control" maxlength="10" placeholder="Teléfono" required>
                         </div>
+                    </div>
 
                     <div class="mb-3">
                         <label for="password" class="form-label">Contraseña:</label>
