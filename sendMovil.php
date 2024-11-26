@@ -15,28 +15,78 @@ $name = isset($_GET['name']) ? htmlspecialchars($_GET['name']) : "Usuario";
     <style>
         /* Fondo de la página */
         body {
-            background-image: url('dist/img/ok_time_background.webp');
+            background-color: #dc3545; /* Rojo como fondo principal */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
-            color: white; /* Color de texto blanco para legibilidad */
+            color: white; /* Texto en blanco */
         }
-        /* Superposición para opacar el fondo */
+
+        /* Superposición para oscurecer el fondo */
         .overlay {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.6); /* Opacidad para oscurecer el fondo */
+            background-color: rgba(0, 0, 0, 0.4); /* Fondo semitransparente */
             z-index: 1;
         }
-        /* Contenedor de contenido centrado y en blanco */
-        .content {
+
+        /* Contenedor principal */
+        .content-container {
             position: relative;
             z-index: 2;
+            background: rgba(255, 255, 255, 0.95); /* Fondo blanco con transparencia */
+            color: #343a40; /* Texto gris oscuro */
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        /* Estilo del título */
+        .content-container h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            color: #dc3545; /* Rojo para el título */
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Estilo del texto */
+        .content-container p.lead {
+            font-size: 1.2rem;
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        /* Botón */
+        .btn-primary {
+            background-color: #dc3545;
+            border: none;
             color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #bd2130; /* Rojo más oscuro al pasar el ratón */
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .content-container {
+                padding: 20px;
+            }
+
+            .content-container h1 {
+                font-size: 2rem;
+            }
+
+            .content-container p.lead {
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
@@ -44,14 +94,14 @@ $name = isset($_GET['name']) ? htmlspecialchars($_GET['name']) : "Usuario";
     <!-- Superposición -->
     <div class="overlay"></div>
 
-    <!-- Contenido principal -->
-    <div class="content text-center">
-        <h1 class="mb-4">¡Muchas gracias, <?php echo $name; ?>!</h1>
+    <!-- Contenedor principal -->
+    <div class="content-container text-center">
+        <h1>¡Muchas gracias, <?php echo $name; ?>!</h1>
         <p class="lead">
             Te has registrado con éxito. Te invitamos a descargar la aplicación móvil <strong>Ok Time</strong> para que puedas acceder a todas las funcionalidades que tenemos pensadas para ti.
         </p>
         <p>
-            <a href="dist/img/store.jpeg" class="btn btn-primary mt-3">
+            <a href="dist/img/descarga.png" class="btn btn-primary mt-3">
                 Descargar Ok Time
             </a>
         </p>

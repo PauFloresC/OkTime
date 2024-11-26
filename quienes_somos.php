@@ -25,8 +25,8 @@
         .content {
             background: rgba(255, 255, 255, 0.9); /* Fondo semitransparente */
             border-radius: 20px; /* Bordes redondeados */
-            padding: 30px;
-            max-width: 800px;
+            padding: 20px;
+            max-width: 90%; /* Ajusta al 90% del ancho de la pantalla */
             margin: auto;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra */
             font-family: 'Arial', sans-serif;
@@ -35,7 +35,7 @@
         /* Encabezado */
         .content h1 {
             font-family: 'Poppins', sans-serif;
-            font-size: 2.5rem;
+            font-size: 2rem; /* Ajusta el tamaño para pantallas pequeñas */
             font-weight: bold;
             color: #dc3545;
             margin-bottom: 20px;
@@ -44,27 +44,55 @@
         /* Párrafos */
         .content p.lead {
             font-family: 'Poppins', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1rem; /* Tamaño más pequeño para pantallas pequeñas */
             color: #343a40;
             text-align: justify;
-            line-height: 1.8;
+            line-height: 1.6;
         }
 
         /* Ícono decorativo en la esquina superior */
         .icon-map {
             position: absolute;
-            top: 100px; /* Ajusta la posición desde arriba */
-            right: 280px; /* Mueve más hacia la izquierda */
-            font-size: 70px; /* Tamaño del ícono */
-            color: #ffffff; /* Blanco para contraste */
-            opacity: 0.9; /* Transparencia leve */
-            z-index: 100; /* Asegura que esté encima */
+            top: 50px;
+            right: 20px;
+            font-size: 40px; /* Tamaño ajustado para pantallas pequeñas */
+            color: #ffffff;
+            opacity: 0.9;
+            z-index: 100;
         }
 
         /* Palabras resaltadas */
         .content p.lead strong {
             font-weight: bold;
             color: #212529;
+        }
+
+        /* Botón volver */
+        .btn-danger {
+            font-size: 1rem; /* Tamaño de texto ajustado */
+            padding: 10px 20px;
+        }
+
+        /* Responsividad adicional */
+        @media (min-width: 768px) {
+            .content {
+                max-width: 700px;
+                padding: 30px;
+            }
+
+            .icon-map {
+                font-size: 70px;
+                top: 100px;
+                right: 50px;
+            }
+
+            .content h1 {
+                font-size: 2.5rem;
+            }
+
+            .content p.lead {
+                font-size: 1.2rem;
+            }
         }
     </style>
 </head>

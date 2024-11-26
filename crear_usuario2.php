@@ -182,14 +182,17 @@ if (isset($_POST['crearUsuario'])) {
                                 <input type="password" name="password" id="password" class="form-control" required>
                             </div>
                             <div class="mb-3">
-                                <input type="checkbox" name="terms" id="terms" class="form-check-input" required>
-                                <label for="terms" class="form-check-label">Acepto los <a href="#">Términos y Condiciones</a></label>
-                            </div>
+                            <input type="checkbox" name="terms" id="terms" class="form-check-input" required>
+                            <label for="terms" class="form-check-label">
+                                Acepto los 
+                                <a href="terminos_condiciones.php" target="_blank">Términos y Condiciones</a>
+                            </label>
+                        </div>
                             <div class="d-flex justify-content-between">
                                 <button type="submit" name="crearUsuario" class="btn btn-custom btn-lg">
                                     <i class="fas fa-user-plus"></i> Crear Usuario
                                 </button>
-                                <a href="#" class="btn btn-cancel btn-lg">
+                                <a href="main.php" class="btn btn-cancel btn-lg">
                                     <i class="fas fa-times"></i> Cancelar
                                 </a>
                             </div>
@@ -200,7 +203,7 @@ if (isset($_POST['crearUsuario'])) {
         </div>
     </div>
 
-    <div id="loadingSpinner" class="spinner-overlay d-none">
+    <!-- <div id="loadingSpinner" class="spinner-overlay d-none">
         <div class="spinner-border text-danger" role="status">
             <span class="sr-only">Cargando...</span>
         </div>
@@ -214,7 +217,7 @@ if (isset($_POST['crearUsuario'])) {
             spinner.classList.remove('d-none');
             setTimeout(() => form.submit(), 2000);
         });
-    </script>
+    </script> -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 </body>

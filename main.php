@@ -18,25 +18,42 @@
             flex-direction: column;
             min-height: 100vh;
         }
+
+        .top-right-buttons {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            z-index: 10;
+        }
+
+        .top-right-buttons .btn {
+            margin: 5px;
+        }
+
         .content {
             text-align: center;
             padding: 20px;
-            flex-grow: 1; /* Hace que el contenido principal ocupe el espacio necesario */
+            flex-grow: 1;
         }
+
         .logo {
             margin: 20px auto;
         }
-        .btn {
-            margin: 10px 0;
+
+        .carousel-container {
+            max-width: 600px;
+            margin: 20px auto;
         }
+
         .features {
             display: flex;
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
             margin-top: 30px;
-            margin-bottom: 50px; /* Espacio entre los cuadros y el pie de página */
+            margin-bottom: 50px;
         }
+
         .feature-box {
             background-color: white;
             color: #dc3545;
@@ -46,34 +63,61 @@
             width: 300px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         }
+
         .feature-box i {
             font-size: 2rem;
             margin-bottom: 10px;
         }
+
         footer {
             background-color: #6c757d;
             color: white;
             text-align: center;
             padding: 10px 0;
-            margin-top: auto; /* Empuja el pie de página al fondo de la página */
+            margin-top: auto;
         }
     </style>
 </head>
 <body>
-    <!-- Logotipo centrado -->
-    <div class="content">
-        <img src="dist/img/favicon.ico" alt="Logotipo" class="logo" width="200">
-        <h2>¿Necesitas gestionar tus tiempos y/o viajes?</h2>
-        <p class="lead">¡Crea una cuenta en Ok Time!</p>
-        <!-- Botones -->
-        <a href="crear_usuario2.php" class="btn btn-primary btn-lg">
+    <!-- Botones en la parte superior derecha -->
+    <div class="top-right-buttons">
+        <a href="crear_usuario2.php" class="btn btn-primary">
             <i class="fas fa-user-plus"></i> Registrarse
         </a>
-        <a href="quienes_somos.php" class="btn btn-outline-warning btn-lg">
+        <a href="quienes_somos.php" class="btn btn-outline-warning">
             <i class="fas fa-info-circle"></i> ¿Quiénes Somos?
         </a>
     </div>
-    
+
+    <!-- Contenido principal -->
+    <div class="content">
+        <img src="dist/img/favicon.ico" alt="Logotipo" class="logo" width="200">
+        <h2>¿Necesitas gestionar tus tiempos y/o viajes?</h2>
+
+        <!-- Carrusel -->
+        <div id="carouselExample" class="carousel slide carousel-container" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="dist/img/okTimeIndex.png" class="d-block w-100" alt="OkTime Index">
+                </div>
+                <div class="carousel-item">
+                    <img src="dist/img/foto1.png" class="d-block w-100" alt="Photo 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="dist/img/foto2.png" class="d-block w-100" alt="Img Inicio">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+            </a>
+        </div>
+    </div>
+
     <!-- Cuadros informativos -->
     <div class="features">
         <div class="feature-box">
